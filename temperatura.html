@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <script src="logica.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    
+
+</head>
+
+<body>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style> * {
+        margin:0px;
+        padding:0px;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: monospace,'Courier New', Courier, monospace;
+        background: url(imagenes/Logo.png);
+        background-repeat: repeat;
+    }
+    
+    header {
+        background: #1586BB;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    nav .logo img {
+        width: 300px;
+    }
+    
+    ul, ol {
+        list-style:none;
+    }
+    
+    .nav > li {
+        /* float:left; */
+        display: inline-block;
+    }
+    
+    .nav li a {
+        background-color:#1586BB;
+        color:#000;
+        text-decoration:none;
+        padding:10px 12px;
+        display:block;
+    }
+    
+    .nav li a:hover {
+        background-color :#000 ;
+        color: #ffffff;
+    }
+    
+    .nav li ul {
+        display:none;
+        position:absolute;
+        min-width:140px;
+    }
+    
+    .nav li:hover > ul {
+        display:block;
+    }
+    
+    .nav li ul li {
+        position:relative;
+    }
+    
+    .nav li ul li ul {
+        right:-140px;
+        top:0px;
+    }
+    
+    .regla{
+        position: fixed;
+        top: 140px;
+        left: 900px;
+    }
+    button{
+        padding: 20px 10px;
+        background-color: #1586BB;
+    }
+    input{
+        padding: 20px 50px;
+    }</style>
+</head>
+<body>
+    <script> var C = 0;
+        var K = 0;
+        var F = 0;
+        
+            //Fahrenheit a Celsius   C =(F-32)*5/9
+            function Fahrenheit_Celsius() {
+              
+              F = document.getElementById("cantidad").value
+        
+              C =(F-32)*5/9;
+             
+              document.write("Celsius: " + C);
+              
+            }
+             
+           //Fahrenheit a Kelvin K = (F-32)*5/9 +273
+            function Fahrenheit_Kelvin() {
+        
+              F = document.getElementById("cantidad").value
+        
+              K = (F-32)*5/9 +273;
+        
+              document.write("Kelvin: " + K);
+              
+            }
+            
+            //Celsius a Fahrenheit  F = C*9/5+32
+            function Celsius_Fahrenheit() {
+        
+              C = document.getElementById("cantidad").value
+        
+              F =C*9/5+32;
+        
+              document.write("Fahrenheit " + F);
+              
+            }
+           
+           //Celsius a Kelvin K=C+273
+           function Celsius_Kelvin() {
+        
+             C = document.getElementById("cantidad").value;
+        
+             K=C+273;
+        
+             document.write("Celsius: " + K);
+        
+            }
+            
+                         
+            //Kelvin a Fahrenheit   F= (k-273)9/5+32
+            function Kelvin_Fahrenheit() {
+        
+               K = document.getElementById("cantidad").value;
+        
+               F= (K-273)*9/5+32;
+        
+              document.write("Fahrenheit: " + F );
+              
+            }
+        
+             //Kelvin a Celsius C=K-273
+            function Kelvin_Celsius() {
+        
+            K = document.getElementById("cantidad").value;
+        
+            C=K-273;
+        
+            document.write("Celsius: " + C );
+              
+            }
+             
+             
+        
+        
+        
+        </script>
+    
+  
+  
+  
+  
+  <div id="Mensaje"><header>
+    <nav>
+    <div class="logo">
+        <img src="imagenes/Logo.png" alt="">
+    </div>
+        <ul class="nav">
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="">Servicios</a>
+                <ul>
+                    <li><a href="temperatura.html"> Conversor de temperatura </a></li>
+                    
+                    <li><a href="">Conversor de unidades</a>
+                        <ul>
+                            <li><a href="longitud.html">Unidades de longitud </a></li>
+                            <li><a href="">Unidades de volumen</a></li>
+                            <li><a href="">Unidades de area</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="">Contacto</a>
+            <ul>
+                <li><a href="">Submenu1</a></li>
+                    <li><a href="">Submenu2</a></li>
+                    <li><a href="">Submenu3</a></li>
+            </ul>
+        </ul>
+    </nav></div><br>
+    <strong>Conversor de Temperatura</strong><br>
+  
+  <br>Ingrese valor a convertir<br>
+  <input type="number"  id ="cantidad" name="numero">
+  
+ <h2> Seleccione la conversion que quiere hacer:</h2><br><br>
+ 
+<button onclick="Fahrenheit_Celsius()">Fahrenheit a Celsius</button>
+<button onclick="Fahrenheit_Kelvin()">Fahrenheit a Kelvin</button><br><br>
+<button onclick="Celsius_Fahrenheit()">Celsius a Fahrenheit</button>
+<button onclick="Celsius_Kelvin()">Celsius a Kelvin</button><br><br>
+<button onclick="Kelvin_Fahrenheit()">Kelvin a Fahrenheit</button>
+<button onclick="Kelvin_Celsius()">Kelvin a Celsius</button><br>
+<img class="regla" src="imagenes/regla1.png">
+<style>
+    body {
+      background-image: url("imagenes/fondo.png");
+    }
+    </style>
+</body>
+
+
+</html>
